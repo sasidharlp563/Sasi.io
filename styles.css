@@ -1,0 +1,543 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/*#nav-bar {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    max-height: 60px; /* Adjust the max-height as needed */
+    /*overflow-y: auto; /* Enable vertical scrolling when the content exceeds max-height
+}*/
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to the top of each section to create space between content and navbar */
+section {
+    padding-top: 10px; /* Adjust the value based on your design */
+}
+
+/* Style for the fixed navbar */
+#nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    padding: 25px 0px;
+    top: 0;
+    width: 100%;
+    background-color: #F5F5F5;
+    z-index: 1000; /* Ensure it's above other elements*/
+    max-height: 60px; /* Adjust the max-height as needed */
+    overflow-y: auto; /* Enable vertical scrolling when the content exceeds max-height */
+} 
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-link.active {
+    color: #007BFF; /* Change the color for the active state */
+}
+
+
+.nav-link li {
+    margin-right: 60px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link a:hover,
+.nav-link.active {
+    color: #007BFF;
+    border-bottom: 3px solid #007BFF; /* Add underline for active state */
+}
+
+
+.nav-link a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: #007BFF;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link a:hover::after,
+.nav-link a.active::after {
+    width: 100%;
+}
+
+section {
+    padding: 2px; /* Add padding to all sections */
+    margin: 0; /* Set margin to 0 to eliminate default spacing */
+    height: auto; /*auto*/
+    overflow: auto;
+}
+
+/* Add this CSS for the new content */
+
+.home-section {
+    background-image: url('Utils/Images/home-section.webp');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    /*background-color: #c7baba; /* Adjust the background color as needed */
+    margin-top: 10px;
+    /*padding: 35px 20px; /* Adjust the padding as needed */
+}
+
+.welcome-message {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 200px; /* Adjust the width of the circular image */
+    height: 200px; /* Adjust the height of the circular image */
+    margin-top: 50px; /* Adjust the margin-top value to move the image down */
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: 10% 3%; /* Adjust the values to move the content within the circular frame */
+    transition: transform 0.3s ease;
+}
+
+.profile-image h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.home-contact {
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+.home-contact a {
+    color: white;
+}
+
+.home-contact a:hover {
+    color: #007BFF;
+}
+
+.profile-image:hover img {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+/* Add this CSS for the About section */
+.about-section {
+    background-image: url('Utils/Images/about-section.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #64ffda;
+    /*margin-top: 10px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*padding: 20px;*/
+}
+
+.about-section h2 {
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-top: 15px; /* Add a margin to the top of the heading */
+    /*margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.about-content {
+    max-width: 800px; /* Adjust the max-width as needed */
+}
+
+.about-connect {
+    text-align: center; /* Center the text */
+}
+
+.about-connect h3 {
+    font-size: 1.5em;
+}
+
+.about-text {
+    text-align: justify;
+}
+
+.about-text p {
+    color: black; 
+    /*text-shadow:
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white; */
+    font-size: large;
+}
+
+.about-links {
+    margin-top: 20px;
+}
+
+.about-links h3 {
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-links ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.about-links li {
+    margin-right: 15px;
+}
+
+.about-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-links a:hover {
+    color: #007BFF;
+}
+
+/* Styling for Font Awesome icons */
+.about-links i {
+    font-size: 24px;
+}
+
+.fab.fa-linkedin {
+    color: #0077B5; /* LinkedIn color */
+}
+
+.fab.fa-github {
+    color: #211F1F; /* GitHub color */
+}
+
+.fab.fa-medium {
+    color: #12100E; /* Medium color */
+}
+
+
+.resume-section {
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    overflow: hidden;
+    background-image: url('Utils/Images/resume-section.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.resume-section h2 {
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-top: 15px;
+    margin-bottom: 20px; /* Add some space below the heading*/
+}
+
+.resume-preview {
+    max-width: 800px; /* Set the maximum width for the preview */
+    margin: 0 auto; /* Center the preview */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.resume-preview iframe {
+    width: 100%;
+    height: 300px; /* Set the desired height for the preview */
+    border: none; /* Remove iframe border */
+}
+
+
+.download-resume h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    /*color: #64ffda;*/
+}
+
+.download-resume p {
+    color: #1a1a1d;
+    margin-bottom: 20px;
+}
+
+.download-resume a {
+    display: inline-block; /* Add this line to change the display property */
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #64ffda;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.download-resume a:hover {
+    background-color: #1a1a1d;
+}
+
+.employment-section {
+    position: relative;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('Utils/Images/employment-section.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.employment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);  /*Adjust the opacity as needed */
+   /* z-index: -1; /* Place the background behind the content */
+}
+
+.employment-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    text-decoration-color: white;
+    font-style: bold;
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Place the content above the background */
+}
+
+.employment-section h2 {
+    color: white;
+    text-decoration-color: white;
+    font-style: bold;
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Place the content above the background */
+}
+
+.employment-item {
+    margin-bottom: 20px;
+}
+
+.employment-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.employment-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    column-gap: white;
+}
+
+.emp-paragraph {
+    text-align: justify;
+}
+  
+
+.projects-section {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Utils/Images/proj.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* padding: 20px; */
+
+    /* Add more styling as needed */
+}
+
+.projects-content {
+    color: white;
+    text-decoration-color: white;
+    font-style: bold;
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Place the content above the background */
+}
+
+.projects-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    /*z-index: -1; /* Place the background behind the content */
+}
+
+.project {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the projects */
+    margin-top: 20px; /* Adjust the margin-top value */
+}
+
+.projects-content h2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.project h3 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.project p {
+    color: white;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.project-link {
+    text-decoration: underline; /* Remove default underline */
+    color: white; /* Set the initial text color */
+}
+
+.project-link:hover {
+    color: blue; /* Change text color on hover */
+}
+
+
+/* Your existing styles */
+
+.skills-section {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Utils/Images/tech_skill.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.skills h3:hover,
+.skills active {
+    color: #007BFF;
+    /*border-bottom: 3px solid #007BFF; /* Add underline for active state */
+}
+
+.skills {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the skills */
+    margin-top: 20px; /* Adjust the margin-top value */
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h3 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add some space below the heading */
+    cursor: pointer; /* Add cursor pointer for clickable effect */
+    text-decoration: underline;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: none; /* Hide the skills list by default */
+}
+
+.skills-list-item {
+    margin-bottom: 10px;
+}
+
+.skills h2 {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+.achievements-section {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+
+.achievements-list {
+    list-style-type: none; /* Remove bullet points */
+}
+
+
+.contact-section {
+    text-align: center;
+    /*margin-bottom: 30px;*/
+}
+
+.contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 0 20px; /* Adjust spacing between items */
+}
+
+.contact-item i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.same-background {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Utils/Images/prof_achiev.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
